@@ -20,14 +20,14 @@
     <div>
       <h1>Instructions</h1>
       <ul>
-        <li *ngFor="let instruction of recipe.instructions">
+        <li *ngFor="let instruction of recipe.instructions | strToArray">
           {{instruction}}
         </li>
       </ul>
     </div>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-raised-button color="primary">LIKE</button>
+    <button mat-raised-button color="primary" routerLink="/recipes/{{recipe.id}}">Voir détail</button>
     <button mat-raised-button color="primary" (click)="handleToggleDescription()">toggleDescription</button>
   </mat-card-actions>
 </mat-card>
