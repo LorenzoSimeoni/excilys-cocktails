@@ -6,18 +6,25 @@ import { CustomMaterialModule } from '../custom-material/custom-material.module'
 import { StrToArrayPipe } from '../shared/pipes/str-to-array.pipe';
 import { RecipeOverviewComponent } from './routed/recipe-overview/recipe-overview.component';
 import { RouterModule } from '@angular/router';
+import { RecipeCreateComponent } from './routed/recipe-create/recipe-create.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RecipeUpdateComponent } from './routed/recipe-update/recipe-update.component';
 
 @NgModule({
   declarations: [
     RecipeListComponent,
     RecipeDetailComponent,
     StrToArrayPipe,
-    RecipeOverviewComponent
+    RecipeOverviewComponent,
+    RecipeCreateComponent,
+    RecipeUpdateComponent
   ],
   imports: [
     RouterModule,
+    ReactiveFormsModule,
     CommonModule,
-    CustomMaterialModule
+    CustomMaterialModule,
+    FormsModule
   ]
 })
-export class RecipeModule { }
+export class RecipeModule {}

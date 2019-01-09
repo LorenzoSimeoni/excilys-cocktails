@@ -1,0 +1,25 @@
+<div class="example-container">
+  <form [formGroup]="recipeForm" (submit)="updateCocktail()">
+    <p>
+      <mat-form-field>
+        <input matInput placeholder="Cocktail Name" formControlName="name">
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field>
+        <input matInput placeholder="Photo" formControlName="picture">
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field>
+        <input matInput placeholder="Description" formControlName="description">
+      </mat-form-field>
+    </p>
+    <button mat-raised-button color="primary" type="submit">
+      Submit
+    </button>
+    <button mat-raised-button color="primary" (click)="showRecipe()">
+      Show Recipe In Console
+    </button>
+  </form>
+</div>

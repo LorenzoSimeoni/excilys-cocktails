@@ -1,0 +1,23 @@
+<div class="example-container">
+  <p>
+    <mat-form-field>
+      <input matInput placeholder="Cocktail Name" [(ngModel)]="recipe.name">
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field>
+      <input matInput placeholder="Photo" [(ngModel)]="recipe.picture">
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field>
+      <input matInput placeholder="Description" [(ngModel)]="recipe.description">
+    </mat-form-field>
+  </p>
+  <button mat-raised-button color="primary" (click)="createCocktail()">
+    Create Cocktail
+  </button>
+  <button mat-raised-button color="primary" (click)="showRecipe()">
+    Show Recipe In Console
+  </button>
+</div>

@@ -1,3 +1,18 @@
-<div class="d-flex">
-  <app-recipe-detail *ngFor="let recipe of recipes" [recipe]="recipe"></app-recipe-detail>
+<div *ngIf="recipes">
+  <div class="d-flex" @explainerAnim>
+    <div *ngFor="let recipe of recipes; let i = index">
+      <div class="col col0" *ngIf="i % 4 === 0" >
+        <app-recipe-detail (deleteEvent)="deleteRecipe($event)" [recipe]="recipe" [showDescription]="false"></app-recipe-detail>
+      </div>
+      <div class="col col1" *ngIf="i % 4 === 1">
+        <app-recipe-detail (deleteEvent)="deleteRecipe($event)" [recipe]="recipe" [showDescription]="false"></app-recipe-detail>
+      </div>
+      <div class="col col2" *ngIf="i % 4 === 2">
+        <app-recipe-detail (deleteEvent)="deleteRecipe($event)" [recipe]="recipe" [showDescription]="false"></app-recipe-detail>
+      </div>
+      <div class="col col3" *ngIf="i % 4 === 3">
+        <app-recipe-detail (deleteEvent)="deleteRecipe($event)" [recipe]="recipe" [showDescription]="false"></app-recipe-detail>
+      </div>
+    </div>
+  </div>
 </div>

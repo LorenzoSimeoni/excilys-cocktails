@@ -10,7 +10,6 @@ import { Recipe } from '../../shared/recipe.model';
 })
 export class RecipeOverviewComponent implements OnInit {
 
-  @Input()
   recipe: Recipe;
 
   id: string;
@@ -18,14 +17,11 @@ export class RecipeOverviewComponent implements OnInit {
   constructor(
     private _route: ActivatedRoute,
     private _recipeService: RecipeService
-
   ) {
     this.id = this._route.snapshot.paramMap.get('id');
-    console.log('this.id', this.id);
   }
 
   ngOnInit() {
-    console.log(this.id);
     this._recipeService
       .getRecipe(this.id)
       .subscribe(recipe => (this.recipe = recipe));

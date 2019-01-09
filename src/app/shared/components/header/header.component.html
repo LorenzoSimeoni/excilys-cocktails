@@ -1,1 +1,5 @@
-<mat-toolbar color="primary">Excilys-cocktail</mat-toolbar>
+<mat-toolbar color="primary">
+  <span [routerLink]="['/recipes']" routerLinkActive="router-link-active">Excilys-cocktail</span>
+  <button mat-button [routerLink]="['/recipes','create']" routerLinkActive="router-link-active">Create a cocktail</button>
+</mat-toolbar>
+
