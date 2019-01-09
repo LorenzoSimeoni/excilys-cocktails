@@ -9,11 +9,9 @@ import { HttpClient } from '@angular/common/http';
 })
 export class RecipeService {
 
-  SERVER_URL = 'http://10.0.1.150:8080/api/v1/recipes';
+  SERVER_URL = 'MOCK_RECIPES';
 
-  constructor(
-    private _httpClient: HttpClient
-  ) { }
+  constructor(private _httpClient: HttpClient) {}
 
   getAllRecipes(): Observable<Recipe[]> {
     return this._httpClient.get<Recipe[]>(this.SERVER_URL);
